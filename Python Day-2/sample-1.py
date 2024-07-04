@@ -3,9 +3,9 @@
 #Text Types
 '''
 #Str
-a = "Sai Vardhan"
+a = "tarun chouhan"
 b = "10"
-c = 'sai vardhan'
+c = 'tarun chouhan'
 d = '10'
 print(a)
 print(type(d))
