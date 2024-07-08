@@ -44,7 +44,7 @@ endnum=input("enter the end number")
 
 value=frontnum+num+endnum
 print(value)
-'''
+
 #movie
 
 x=int(input())
