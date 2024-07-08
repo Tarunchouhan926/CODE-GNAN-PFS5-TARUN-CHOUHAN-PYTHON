@@ -1,4 +1,4 @@
-'''#Reverse of a given number
+#Reverse of a given number
 
 n=int(input("enter the number:"))#135
 rev=0
