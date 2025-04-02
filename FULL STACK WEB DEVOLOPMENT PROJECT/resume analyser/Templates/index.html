@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Analyzer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h2>Resume Analyzer</h2>
+    
+    <!-- Job Description Input -->
+    <textarea id="job_description" placeholder="Paste Job Description Here..."></textarea>
+    
+    <!-- Resume Upload -->
+    <input type="file" id="resume">
+    
+    <!-- Analyze Button -->
+    <button onclick="uploadResume()">Analyze</button>
+
+    <!-- ATS Score Progress Bar -->
+    <div id="ats-progress-container" style="display: none;">
+        <label for="ats-progress">ATS Score:</label>
+        <div class="progress-bar-container">
+            <div id="ats-progress" class="progress-bar"></div>
+        </div>
+        <span id="ats-score" class="ats-score-text">0%</span>
+    </div>
+
+    <!-- Output for ATS analysis -->
+    <pre id="output"></pre>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
