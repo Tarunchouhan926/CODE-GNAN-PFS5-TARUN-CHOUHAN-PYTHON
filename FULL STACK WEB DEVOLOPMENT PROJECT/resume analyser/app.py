@@ -68,11 +68,10 @@ SKILLS_LIST = set([
     "Git", "GitHub", "GitLab", "Bitbucket", "Linux", "Bash", "PowerShell", "WebAssembly (WASM)",
     "Figma", "Adobe XD", "Postman", "Swagger", "Insomnia", "Vim", "Emacs", "VS Code", "JetBrains IntelliJ"
 ])
-len(SKILLS_LIST)   # Include# Keep your skills # Your skills list remains unchanged
+len(SKILLS_LIST)  
 
 
 def extract_text(file):
-    """Extract text from PDF or DOCX files."""
     text = ""
     if file.filename.endswith('.pdf'):
         with pdfplumber.open(file) as pdf:
@@ -84,7 +83,6 @@ def extract_text(file):
 
 
 def extract_skills(text):
-    """Extract skills from text using predefined skill list."""
     return list(set(token.text for token in nlp(text) if token.text in SKILLS_LIST))
 
 
@@ -100,14 +98,12 @@ def extract_personal_details(text):
 
 
 def calculate_ats_score(job_skills, resume_skills):
-    """Calculate ATS Score (match percentage)."""
     matched_skills = set(job_skills) & set(resume_skills)
     score = (len(matched_skills) / len(job_skills)) * 100 if job_skills else 0
     return round(score, 2), matched_skills
 
 
 def store_candidate_info(cgpa, education_details, ats_score):
-    """Store candidate information into the database."""
     query = """
     INSERT INTO candidates (cgpa, education_details, ats_score)
     VALUES (%s, %s, %s)
