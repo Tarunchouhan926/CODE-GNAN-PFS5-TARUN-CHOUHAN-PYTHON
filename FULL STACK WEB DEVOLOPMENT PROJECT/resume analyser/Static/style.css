@@ -61,11 +61,11 @@ button:hover {
         max-width: 500px;
         color: #fff;
         font-size: 16px;
-        word-wrap: break-word; /* Ensure long words break */
+        word-wrap: break-word;
         overflow-wrap: break-word;
         white-space: pre-wrap;
-        max-height: 300px; /* Set a max height */
-        overflow-y: auto; /* Add scroll when needed */
+        max-height: 300px;
+        overflow-y: auto; 
 
     
 }
@@ -88,12 +88,12 @@ progress {
     font-weight: bold;
     margin-top: 10px;
 }
-/* Tooltip styles */
+
 .tooltip {
     position: relative;
     display: inline-block;
     cursor: pointer;
-    border-bottom: 1px dotted black; /* Optional: adds a dotted underline */
+    border-bottom: 1px dotted black;
 }
 
 .tooltip .tooltiptext {
@@ -106,9 +106,9 @@ progress {
     padding: 5px;
     position: absolute;
     z-index: 1;
-    bottom: 100%; /* Position the tooltip above the text */
+    bottom: 100%;
     left: 50%;
-    margin-left: -100px; /* Adjust to center the tooltip */
+    margin-left: -100px;
     opacity: 0;
     transition: opacity 0.3s;
 }
@@ -118,15 +118,15 @@ progress {
     opacity: 1;
 }
 
-/* Progress Bar */
+
 #ats-progress-container {
     margin-top: 20px;
     text-align: center;
 }
 
 .progress-bar-container {
-    width: 90%; /* Make the progress bar container wider */
-    height: 40px; /* Increase the height of the progress bar */
+    width: 90%;
+    height: 40px;
     background-color: #eee;
     border-radius: 20px;
     margin: 10px auto;
@@ -138,12 +138,12 @@ progress {
     background-color: #ff3399;
     border-radius: 20px;
     width: 0;
-    transition: width 1s ease-out;  /* Animated filling */
+    transition: width 1s ease-out; 
 }
 
 .ats-score-text {
-    font-size: 2rem; /* Increase the font size of the ATS score */
-    color: #ff3399;  /* Set the color to match the progress bar */
+    font-size: 2rem; 
+    color: #ff3399; 
     font-weight: bold;
     margin-top: 10px;
 }
