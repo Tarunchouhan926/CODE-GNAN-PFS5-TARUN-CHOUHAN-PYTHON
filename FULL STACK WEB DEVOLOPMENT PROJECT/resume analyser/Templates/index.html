@@ -9,16 +9,12 @@
 <body>
     <h2>Resume Analyzer</h2>
     
-    <!-- Job Description Input -->
     <textarea id="job_description" placeholder="Paste Job Description Here..."></textarea>
     
-    <!-- Resume Upload -->
     <input type="file" id="resume">
     
-    <!-- Analyze Button -->
     <button onclick="uploadResume()">Analyze</button>
 
-    <!-- ATS Score Progress Bar -->
     <div id="ats-progress-container" style="display: none;">
         <label for="ats-progress">ATS Score:</label>
         <div class="progress-bar-container">
@@ -27,7 +23,6 @@
         <span id="ats-score" class="ats-score-text">0%</span>
     </div>
 
-    <!-- Output for ATS analysis -->
     <pre id="output"></pre>
 
     <script src="{{ url_for('static', filename='script.js') }}"></script>
