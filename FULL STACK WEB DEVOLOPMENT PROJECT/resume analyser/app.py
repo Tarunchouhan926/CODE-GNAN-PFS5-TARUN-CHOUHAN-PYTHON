@@ -7,10 +7,8 @@ import mysql.connector
 
 app = Flask(__name__, static_folder="static")
 
-# Load NLP model
 nlp = spacy.load("en_core_web_sm")
 
-# MySQL connection setup
 db_connection = mysql.connector.connect(
     host="localhost",
     user="root",
@@ -19,7 +17,6 @@ db_connection = mysql.connector.connect(
 )
 cursor = db_connection.cursor()
 
-# Define skill list (kept from your original code)
 SKILLS_LIST = set([
     # Programming Languages
     "Python", "Java", "C++", "JavaScript", "TypeScript", "C#", "Swift", "Go", "Rust",
@@ -87,7 +84,6 @@ def extract_skills(text):
 
 
 def extract_personal_details(text):
-    """Extract personal details such as name, location, CGPA, and education."""
     cgpa = re.search(r"CGPA:?[\s:]*(\d+\.\d+)", text)
     education = re.search(r"(?:Education|Degree):?\s*([A-Za-z\s,]+)", text)
     
