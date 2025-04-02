@@ -9,6 +9,3 @@ CREATE TABLE candidates (
     ats_score DECIMAL(5, 2)
 );
 select*from candidates;
-ALTER TABLE candidates
-DROP COLUMN name,
-DROP COLUMN location;
