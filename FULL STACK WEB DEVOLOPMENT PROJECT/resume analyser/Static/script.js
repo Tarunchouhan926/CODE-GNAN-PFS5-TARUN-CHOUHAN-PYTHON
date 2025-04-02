@@ -17,13 +17,12 @@ function uploadResume() {
     formData.append('job_description', jobDescription);
 
     document.getElementById('ats-progress-container').style.display = 'block';
-    document.getElementById('ats-progress').style.width = '0%';  // Reset to 0% initially
+    document.getElementById('ats-progress').style.width = '0%';
     document.getElementById('ats-score').innerText = '0%';
 
     fetch('/upload', { method: 'POST', body: formData })
         .then(res => res.json())
         .then(data => {
-            // If there's an error in the response, handle it
             if (data.error) {
                 alert("Error: " + data.error);
                 document.getElementById('output').style.display = 'none';
